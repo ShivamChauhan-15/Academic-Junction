@@ -1,0 +1,107 @@
+:root {
+    --box-size:120px;
+}
+.head-sem {
+    width: 40%;
+    margin: 3rem;
+    margin-left: 15%;
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    border: 2px solid darkgreen;
+    color: darkgreen;
+    background-color:rgb(92, 238, 48);
+    text-align: center;
+    font-size: 1.6rem;
+}
+.head-sem::selection {
+    background-color: forestgreen;
+    color: blanchedalmond;
+}
+.subName {
+    width: 30%;
+    margin: 0.6rem;
+    margin-left: 20%;
+    background-color: springgreen;
+    color: black;
+    border: currentColor 1px solid;
+    padding: 0.5rem 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    user-select: none;
+}
+.cards {
+    width: 60%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    overflow: hidden;
+    height: min-content;
+    margin-bottom: 1rem;
+    margin-left: 7%;
+}
+.card {
+    height: 0;
+    width: var(--box-size);
+    line-height: var(--box-size);
+    text-align: center;
+    border-radius: 2rem;
+    background-color: lightgreen;
+    transition: all 0.7s ease-in-out;
+    /* overflow: hidden; */
+    box-shadow: 0 0 10px 2.5px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    user-select: none;
+    text-transform: uppercase;
+}
+.card:hover {
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.6);
+    border: 2px solid;
+}
+.active-cards {
+    background-color: rgb(0, 222, 110);
+    border-width: 2px;
+}
+.active-cards + .cards > .card {
+    margin: 1.3rem 1rem;
+    height: var(--box-size);
+}
+
+.nothing {
+    background-color: blue; 
+    display:inline-block; 
+    padding:0.7rem; 
+    border : 2px solid lightblue; 
+    color:white; 
+    text-align: center; 
+    width:fit-content; 
+    margin: 1rem;
+    margin-bottom: 3rem;
+    margin-left:32%;
+    font-size: 0.9rem;
+}
+
+
+@media only screen and (max-width: 650px) {
+    .head-sem {
+        width: 70%;
+    }
+    .subName {
+        width: 65%;
+        margin-left: calc(35%/2);
+    }
+    .cards {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .card {
+        transition-duration: 1.2s;
+    }
+    .nothing {
+        margin-left: 37%;
+    }
+}
+
+
+
