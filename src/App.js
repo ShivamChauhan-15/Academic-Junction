@@ -19,8 +19,8 @@ const App = () => {
       <>
         <NavBar/>
         <Routes>
-          <Route path='/' element={<Main cSem={changeSem}/>}></Route>
-          <Route exact path='/sem' element={<Sem />}></Route>
+          <Route path='/' element={ <Main cSem={changeSem}/> }></Route>
+          <Route exact path='/sem' element={ <Sem /> }></Route>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer/>
